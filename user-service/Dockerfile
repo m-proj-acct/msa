@@ -12,6 +12,7 @@ RUN go mod download
 
 # Copy the source code
 COPY . .
+RUN go mod tidy
 
 # Build the application
 RUN go build -o user-service .
